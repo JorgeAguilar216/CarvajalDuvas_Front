@@ -1,0 +1,55 @@
+<form novalidate #form="ngForm" (submit)="onSubmit(form)">
+    <input type="hidden" name="vueloID"
+    [value]="service.formData.vueloID" />
+    <div class="form-goup">
+        <label>CIUDAD DE ORIGEN</label>
+        <input class="form-control form-control-lg" placeholder="Ciudad de origen"
+        name="ciudadOrigen" #ciudadOrigen="ngModel" [(ngModel)]="service.formData.ciudadOrigen"
+        required>
+    </div>
+    <div class="form-goup">
+        <label>CIUDAD DE DESTINO</label>
+        <input class="form-control form-control-lg" placeholder="Ciudad de destino"
+        name="ciudadDestino" #ciudadDestino="ngModel" [(ngModel)]="service.formData.ciudadDestino"
+        required>
+    </div>
+    <div class="form-goup">
+        <label>FECHA</label>
+        <input class="form-control form-control-lg" placeholder="dd:mm:aa"
+        name="fecha" #fecha="ngModel" [(ngModel)]="service.formData.fecha"
+        required>
+    </div>
+    <div class="form-goup">
+        <label>HORA DE SALIDA</label>
+        <input class="form-control form-control-lg" placeholder="hh:mm:ss"
+        name="horaSalida" #horaSalida="ngModel" [(ngModel)]="service.formData.horaSalida"
+        required>
+    </div>
+    <div class="form-goup">
+        <label>HORA DE LLEGADA</label>
+        <input class="form-control form-control-lg" placeholder="hh:mm:ss"
+        name="horaLlegada" #horaLlegada="ngModel" [(ngModel)]="service.formData.horaLlegada"
+        required>
+    </div>
+    <div class="form-goup">
+        <label>NUMERO DE VUELO</label>
+        <input class="form-control form-control-lg" placeholder="Numero de vuelo"
+        name="numeroVuelo" #numeroVuelo="ngModel" [(ngModel)]="service.formData.numeroVuelo"
+        required>
+    </div>
+    <div class="form-goup">
+        <label>AEROLINEA</label>
+        <input class="form-control form-control-lg" placeholder="Nombre de la aerolinea"
+        name="aerolinia" #aerolinia="ngModel" [(ngModel)]="service.formData.aerolinia"
+        required>
+    </div>
+    <div class="form-goup">
+        <label>ESTADO DEL VUELO</label>
+        <input class="form-control form-control-lg" placeholder="Estado del vuelo"
+        name="estadoVuelo" #estadoVuelo="ngModel" [(ngModel)]="service.formData.estadoVuelo"
+        required>
+    </div>
+    <div class="from-group">
+        <button class="btn btn-info btn-lg btn-block" type="submit" [disabled]="form.invalid">ENVIAR</button>
+    </div>
+</form>

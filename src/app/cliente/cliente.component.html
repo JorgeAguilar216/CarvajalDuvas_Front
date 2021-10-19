@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="row mb-3">
+        <div class="jumtron py-3">
+            <h1 class="display-4 text-center">Cliente Registro de Vuelos</h1>
+        </div>
+        <div class="col-6">
+            <button type="button" class="btn btn-outline-primary btn-space">
+                <a href="http://localhost:4200/prueba" style="color:inherit">Administrador</a>
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <table class="table">
+            <thead class="thead-light">
+                <tr>
+                    <th>Ciudad de Origen</th>
+                    <th>Ciudad de Destino</th>
+                    <th>Fecha</th>
+                    <th>Hora de Salida</th>
+                    <th>Hora de Llegada</th>
+                    <th>Numero de Vuelo</th>
+                    <th>Aerolinia</th>
+                    <th>Estado de Vuelo</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let pd of service.list">
+                    <td>{{pd.ciudadOrigen}}</td>
+                    <td>{{pd.ciudadDestino}}</td>
+                    <td>{{pd.fecha}}</td>
+                    <td>{{pd.horaSalida}}</td>
+                    <td>{{pd.horaLlegada}}</td>
+                    <td>{{pd.numeroVuelo}}</td>
+                    <td>{{pd.aerolinia}}</td>
+                    <td>{{pd.estadoVuelo}}</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

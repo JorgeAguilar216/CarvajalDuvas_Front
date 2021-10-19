@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="row mb-3">
+        <div class="jumtron py-3">
+            <h1 class="display-4 text-center">Administrador Registro de Vuelos</h1>
+        </div>
+        <div class="col-6">
+            <button type="button" class="btn btn-outline-primary btn-space">
+                <a href="http://localhost:4200" style="color:inherit">Cliente</a>
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <app-vuelos-form></app-vuelos-form>
+    </div>
+    <div class="col-md-6">
+        <table class="table">
+            <thead class="thead-light">
+                <tr>
+                    <th>Ciudad de Origen</th>
+                    <th>Ciudad de Destino</th>
+                    <th>Fecha</th>
+                    <th>Hora de Salida</th>
+                    <th>Hora de Llegada</th>
+                    <th>Numero de Vuelo</th>
+                    <th>Aerolinia</th>
+                    <th>Estado de Vuelo</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let pd of service.list">
+                    <td (click)="populateForm(pd)">{{pd.ciudadOrigen}}</td>
+                    <td (click)="populateForm(pd)">{{pd.ciudadDestino}}</td>
+                    <td (click)="populateForm(pd)">{{pd.fecha}}</td>
+                    <td (click)="populateForm(pd)">{{pd.horaSalida}}</td>
+                    <td (click)="populateForm(pd)">{{pd.horaLlegada}}</td>
+                    <td (click)="populateForm(pd)">{{pd.numeroVuelo}}</td>
+                    <td (click)="populateForm(pd)">{{pd.aerolinia}}</td>
+                    <td (click)="populateForm(pd)">{{pd.estadoVuelo}}</td>
+                    <td>
+                        <i class="far fa-trash-alt fa-lg text-danger" (click)="onDelete(pd.vueloID)"></i>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
